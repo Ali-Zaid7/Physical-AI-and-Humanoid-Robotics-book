@@ -20,7 +20,7 @@
   - Demonstrated to users independently
 -->
 
-### User Story 1 - [Brief Title] (Priority: P1)
+### User Story 1 - [Brief Title] (Pr8P-Kiority: P1)
 
 [Describe this user journey in plain language]
 

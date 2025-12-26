@@ -7,10 +7,45 @@ function Get-RepoRoot {
         if ($LASTEXITCODE -eq 0) {
             return $result
         }
-    } catch {
+    } /sp.specify Module 2 – The Digital Twin (Gazebo & Unity)
+
+Target audience:
+- Students learning robot simulation and physics-based environments
+- Practitioners transitioning from software AI to physical AI systems
+
+Focus:
+- Teaching the concept of a Digital Twin for humanoid robotics
+- Simulating physical laws, environments, and sensors before real-world deployment
+- Understanding simulation as the foundation for safe and scalable Physical AI
+
+Success criteria:
+- Reader understands why simulation is mandatory before deploying humanoid robots
+- Reader can explain the role of Gazebo vs Unity in a robotics pipeline
+- Reader understands how physics, collisions, and sensors are modeled
+- Digital Twin concept is clearly connected to sim-to-real transfer
+
+Required coverage:
+- Gazebo for physics simulation (gravity, collisions, rigid bodies)
+- Environment and world building concepts
+- Sensor simulation: LiDAR, depth cameras, IMUs
+- Unity for high-fidelity visualization and human–robot interaction
+- Relationship between Digital Twin and real robot behavior
+
+Constraints:
+- Format: Markdown compatible with Docusaurus
+- Content level: High-level and conceptual
+- No deep code walkthroughs or installation guides
+- Use diagrams and examples descriptively, not implementation-heavy
+
+Not building:
+- Game development tutorials
+- Vendor-specific Unity plugins
+- Low-level physics engine internals
+- Full sensor driver implementations
+catch {
         # Git command failed
     }
-    
+
     # Fall back to script location for non-git repos
     return (Resolve-Path (Join-Path $PSScriptRoot "../../..")).Path
 }
@@ -20,7 +55,7 @@ function Get-CurrentBranch {
     if ($env:SPECIFY_FEATURE) {
         return $env:SPECIFY_FEATURE
     }
-    
+
     # Then check git if available
     try {
         $result = git rev-parse --abbrev-ref HEAD 2>$null
@@ -30,15 +65,15 @@ function Get-CurrentBranch {
     } catch {
         # Git command failed
     }
-    
+
     # For non-git repos, try to find the latest feature directory
     $repoRoot = Get-RepoRoot
     $specsDir = Join-Path $repoRoot "specs"
-    
+
     if (Test-Path $specsDir) {
         $latestFeature = ""
         $highest = 0
-        
+
         Get-ChildItem -Path $specsDir -Directory | ForEach-Object {
             if ($_.Name -match '^(\d{3})-') {
                 $num = [int]$matches[1]
@@ -48,12 +83,12 @@ function Get-CurrentBranch {
                 }
             }
         }
-        
+
         if ($latestFeature) {
             return $latestFeature
         }
     }
-    
+
     # Final fallback
     return "main"
 }
@@ -72,13 +107,13 @@ function Test-FeatureBranch {
         [string]$Branch,
         [bool]$HasGit = $true
     )
-    
+
     # For non-git repos, we can't enforce branch naming but still provide output
     if (-not $HasGit) {
         Write-Warning "[specify] Warning: Git repository not detected; skipped branch validation"
         return $true
     }
-    
+
     if ($Branch -notmatch '^[0-9]{3}-') {
         Write-Output "ERROR: Not on a feature branch. Current branch: $Branch"
         Write-Output "Feature branches should be named like: 001-feature-name"
@@ -97,7 +132,7 @@ function Get-FeaturePathsEnv {
     $currentBranch = Get-CurrentBranch
     $hasGit = Test-HasGit
     $featureDir = Get-FeatureDir -RepoRoot $repoRoot -Branch $currentBranch
-    
+
     [PSCustomObject]@{
         REPO_ROOT     = $repoRoot
         CURRENT_BRANCH = $currentBranch
@@ -134,4 +169,3 @@ function Test-DirHasFiles {
         return $false
     }
 }
-
