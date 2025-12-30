@@ -7,42 +7,7 @@ function Get-RepoRoot {
         if ($LASTEXITCODE -eq 0) {
             return $result
         }
-    } /sp.specify Module 2 – The Digital Twin (Gazebo & Unity)
-
-Target audience:
-- Students learning robot simulation and physics-based environments
-- Practitioners transitioning from software AI to physical AI systems
-
-Focus:
-- Teaching the concept of a Digital Twin for humanoid robotics
-- Simulating physical laws, environments, and sensors before real-world deployment
-- Understanding simulation as the foundation for safe and scalable Physical AI
-
-Success criteria:
-- Reader understands why simulation is mandatory before deploying humanoid robots
-- Reader can explain the role of Gazebo vs Unity in a robotics pipeline
-- Reader understands how physics, collisions, and sensors are modeled
-- Digital Twin concept is clearly connected to sim-to-real transfer
-
-Required coverage:
-- Gazebo for physics simulation (gravity, collisions, rigid bodies)
-- Environment and world building concepts
-- Sensor simulation: LiDAR, depth cameras, IMUs
-- Unity for high-fidelity visualization and human–robot interaction
-- Relationship between Digital Twin and real robot behavior
-
-Constraints:
-- Format: Markdown compatible with Docusaurus
-- Content level: High-level and conceptual
-- No deep code walkthroughs or installation guides
-- Use diagrams and examples descriptively, not implementation-heavy
-
-Not building:
-- Game development tutorials
-- Vendor-specific Unity plugins
-- Low-level physics engine internals
-- Full sensor driver implementations
-catch {
+    } catch {
         # Git command failed
     }
 
