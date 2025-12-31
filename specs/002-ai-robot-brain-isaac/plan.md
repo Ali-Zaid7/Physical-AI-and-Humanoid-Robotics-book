@@ -1,13 +1,13 @@
-# Implementation Plan: [FEATURE]
+# Implementation Plan: Module 3 – The AI-Robot Brain (NVIDIA Isaac)
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `002-ai-robot-brain-isaac` | **Date**: 2025-12-30 | **Spec**: [spec.md](spec.md)
+**Input**: Feature specification from `specs/002-ai-robot-brain-isaac/spec.md`
 
 **Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
 ## Summary
 
-[Extract from feature spec: primary requirement + technical approach from research]
+This plan outlines the creation of the third module of the "Physical AI & Humanoid Robotics" textbook, focusing on the "AI-Robot Brain" using NVIDIA Isaac technologies. The module will cover NVIDIA Isaac Sim for photorealistic simulation and synthetic data generation, Isaac ROS for accelerated perception pipelines including VSLAM, and the Nav2 stack for autonomous bipedal navigation. The content will be created in Docusaurus-compatible Markdown, following the principles outlined in the project constitution.
 
 ## Technical Context
 
@@ -17,25 +17,25 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: Markdown (Docusaurus), Python (for conceptual Isaac ROS/Sim scripting)
+**Primary Dependencies**: Docusaurus, React.js, NVIDIA Isaac Sim, NVIDIA Isaac ROS, ROS 2 Humble
+**Storage**: N/A (Content is stored in Git)
+**Testing**: N/A (Content validation is based on reviews and Docusaurus build success)
+**Target Platform**: Web (via GitHub Pages)
+**Project Type**: Documentation (Book Module)
+**Performance Goals**: Fast page loads (<2s), successful Docusaurus build
+**Constraints**: All content must be Docusaurus-compatible Markdown. Content level is high-level and conceptual, avoiding deep code walkthroughs. Use diagrams and descriptive examples.
+**Scale/Scope**: One module of a four-module book, covering NVIDIA Isaac technologies for robot perception and navigation.
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- [ ] **Spec-First Execution**: Does this plan originate from an approved spec?
-- [ ] **Technical Correctness**: Are the concepts and technologies in this plan accurate and defensible?
-- [ ] **Progressive Clarity**: Does the plan build from simple concepts to more advanced ones?
-- [ ] **Practical Grounding**: Is theory reinforced with examples, diagrams, or code?
-- [ ] **AI-Compatible Structure**: Does the plan support automated review, iteration, and validation?
+- [X] **Spec-First Execution**: This plan is derived directly from the approved `spec.md`.
+- [X] **Technical Correctness**: The plan outlines a module focused on industry-standard NVIDIA Isaac technologies and concepts.
+- [X] **Progressive Clarity**: The module builds upon previous modules, focusing on advanced perception and navigation.
+- [X] **Practical Grounding**: The spec requires conceptual diagrams and illustrative examples of Isaac components.
+- [X] **AI-Compatible Structure**: The plan uses Spec-Kit Plus and a structured Markdown format, which is designed for AI-driven workflows.
 
 ## Project Structure
 
@@ -52,51 +52,16 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
 
 ```text
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
-
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+docs/
+└── 002-ai-robot-brain-isaac/ # Content for this module
+    ├── 01-isaac-sim-overview.md
+    ├── 02-isaac-ros-vslam.md
+    └── 03-nav2-for-humanoids.md
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+**Structure Decision**: A flat directory structure within the `docs/` folder will be used for this module's content. This is the standard and simplest approach for Docusaurus projects, ensuring a clear and maintainable content hierarchy.
 
 ## Complexity Tracking
 
