@@ -1,3 +1,9 @@
+---
+id: 002-ai-robot-brain-isaac-01-isaac-sim-overview
+sidebar_position: 1
+title: "Chapter 03.1: NVIDIA Isaac Sim: Overview"
+---
+
 # NVIDIA Isaac Sim: Overview, Photorealistic Simulation and Synthetic Data
 
 Welcome to Module 3, where we delve into the "brain" of our AI-powered humanoid robot. Before a robot can interact intelligently with the real world, it needs to perceive, understand, and navigate its environment. This module focuses on NVIDIA's Isaac platform, a powerful suite of tools designed to accelerate robotics development, especially for AI applications.

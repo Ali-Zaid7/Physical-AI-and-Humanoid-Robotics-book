@@ -1,3 +1,9 @@
+---
+id: 002-digital-twin-simulation-03-simulation-concepts
+sidebar_position: 3
+title: "Chapter 02.3: Core Simulation Concepts"
+---
+
 # Core Simulation Concepts: Physics, Collisions, and Sensors
 
 To create a believable and useful Digital Twin, a simulation environment must accurately model how a robot interacts with its physical world. This involves understanding core concepts like physics, collisions, and how sensors perceive the virtual environment.

@@ -1,3 +1,9 @@
+---
+id: 003-vision-language-action-02-vla-pipeline
+sidebar_position: 2
+title: "Chapter 04.2: The Full Vision-Language-Action (VLA) Pipeline"
+---
+
 # The Full Vision-Language-Action (VLA) Pipeline
 
 Now let's zoom in on the VLA loop and trace the data flow from a human's voice command to the robot's physical action. This pipeline brings together all the concepts we've learned in the previous modules.
@@ -50,20 +56,20 @@ This end-to-end pipeline demonstrates how the abstract world of language is grou
 
 ```mermaid
 graph TD
-    A[Human Voice Command] --> B{Speech-to-Text};
-    B --> C{Large Language Model (LLM)};
-    C -- "Task Plan" --> D{Action Translator};
+    A["Human Voice Command"] --> B{"Speech-to-Text"};
+    B --> C{"Large Language Model (LLM)"};
+    C -- "Task Plan" --> D{"Action Translator"};
     
-    subgraph "Robot's Brain & Body"
-        D -- "ROS 2 Actions" --> E{ROS 2 Ecosystem};
-        E --> F[Navigation Stack (Nav2)];
-        E --> G[Manipulation Controller];
-        E --> H[Perception System (Isaac ROS)];
+    subgraph Robot Brain and Body
+        D -- "ROS 2 Actions" --> E{"ROS 2 Ecosystem"};
+        E --> F["Navigation Stack (Nav2)"];
+        E --> G["Manipulation Controller"];
+        E --> H["Perception System (Isaac ROS)"];
         H -- "World State" --> C;
-        H --> D;
+        H -- "World State" --> D;
     end
 
-    F --> I[Physical Actions];
+    F --> I["Physical Actions"];
     G --> I;
 
     style A fill:#D6EAF8,stroke:#333,stroke-width:2px

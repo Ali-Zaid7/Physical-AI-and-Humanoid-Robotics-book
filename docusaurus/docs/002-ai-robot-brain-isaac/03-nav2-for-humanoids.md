@@ -1,3 +1,9 @@
+---
+id: 002-ai-robot-brain-isaac-03-nav2-for-humanoids
+sidebar_position: 3
+title: "Chapter 03.3: Nav2 for Humanoid Robots"
+---
+
 # Nav2 for Humanoid Robots
 
 With our robot now capable of perceiving its environment through Isaac ROS and VSLAM, the next critical step for any autonomous robot is to be able to move intelligently from one point to another. This is the domain of navigation, and in the ROS 2 ecosystem, the standard solution is the **Nav2 stack**.

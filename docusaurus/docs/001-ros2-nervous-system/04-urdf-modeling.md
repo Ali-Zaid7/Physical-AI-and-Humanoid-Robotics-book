@@ -1,3 +1,9 @@
+---
+id: 001-ros2-nervous-system-04-urdf-modeling
+sidebar_position: 4
+title: "Chapter 01.4: Modeling a Humanoid Robot with URDF"
+---
+
 # Modeling a Humanoid Robot with URDF
 
 While ROS 2 provides the nervous system for our robot, we still need a way to describe its physical body. What does it look like? How are its limbs connected? How do they move?

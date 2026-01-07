@@ -1,3 +1,9 @@
+---
+id: 003-vision-language-action-03-cognitive-planning
+sidebar_position: 3
+title: "Chapter 04.3: Cognitive Planning with Large Language Models (LLMs)"
+---
+
 # Cognitive Planning with Large Language Models (LLMs)
 
 The "magic" of the Vision-Language-Action (VLA) loop lies in its ability to translate a vague, high-level human command into a concrete plan. This is the role of **cognitive planning**, and in modern robotics, it is increasingly powered by Large Language Models (LLMs).
@@ -48,8 +54,8 @@ This separation of concerns is vital. The LLM handles the "what" and "why" of th
 
 ```mermaid
 graph TD
-    A[LLM Task Plan<br>e.g., `{ "skill": "navigate", "target": "table" }`] --> B{Action Translator};
-    B -- "Grounded with World State" --> C[ROS 2 Action<br>e.g., `nav2_client.send_goal(table_coordinates)`];
+    A["LLM Task Plan (e.g., skill: navigate, target: table)"] --> B{Action Translator};
+    B -- "Grounded with World State" --> C["ROS 2 Action (e.g., nav2_client.send_goal)"];
     C --> D[Robot's ROS 2 System];
 
     style A fill:#FEF9E7,stroke:#333,stroke-width:2px

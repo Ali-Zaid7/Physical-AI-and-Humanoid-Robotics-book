@@ -1,3 +1,9 @@
+---
+id: 002-digital-twin-simulation-02-gazebo-unity-roles
+sidebar_position: 2
+title: "Chapter 02.2: Gazebo vs. Unity: Roles in Robotics Simulation"
+---
+
 # Gazebo vs. Unity: Roles in Robotics Simulation
 
 When it comes to robotics simulation, two platforms often emerge as leaders: **Gazebo** and **Unity**. While both are powerful simulation environments, they excel in different areas and are often used together to create comprehensive Digital Twins. Understanding their distinct roles is key to building effective simulation pipelines.

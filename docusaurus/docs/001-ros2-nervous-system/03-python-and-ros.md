@@ -1,3 +1,9 @@
+---
+id: 001-ros2-nervous-system-03-python-and-ros
+sidebar_position: 3
+title: "Chapter 01.3: Bridging AI and Robotics with Python"
+---
+
 # Bridging AI and Robotics with Python: The `rclpy` Library
 
 You've learned the core concepts of ROS 2, but how do you actually use them in your own code? For Python developers, the answer is `rclpy` (ROS Client Library for Python).

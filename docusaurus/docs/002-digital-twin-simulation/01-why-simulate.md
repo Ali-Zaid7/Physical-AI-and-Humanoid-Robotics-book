@@ -1,3 +1,9 @@
+---
+id: 002-digital-twin-simulation-01-why-simulate
+sidebar_position: 1
+title: "Chapter 02.1: Why Simulate? The Necessity of a Digital Twin"
+---
+
 # Why Simulate? The Necessity of a Digital Twin
 
 In the exciting field of humanoid robotics, the journey from concept to a functioning physical robot is complex and fraught with challenges. Before any code is deployed to an expensive, delicate, and potentially dangerous physical robot, there's a crucial intermediate step: **simulation**.
@@ -30,8 +36,8 @@ In this module, we'll explore how these Digital Twins are created and used, focu
 graph TD
     A[Physical Robot Development] --> B{Challenges};
 
-    B --> C[Safety Risks (Damage to Robot/Environment)];
-    B --> D[High Costs (Hardware, Maintenance, Repairs)];
+    B --> C["Safety Risks (Damage to Robot/Environment)"];
+    B --> D["High Costs (Hardware, Maintenance, Repairs)"];
     B --> E[Time-Consuming Iteration];
     B --> F[Limited Test Scenarios];
 

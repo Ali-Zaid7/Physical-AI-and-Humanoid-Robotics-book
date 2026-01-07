@@ -1,3 +1,9 @@
+---
+id: 003-vision-language-action-04-capstone-and-conclusion
+sidebar_position: 4
+title: "Chapter 04.4: Capstone and Conclusion"
+---
+
 # Capstone and Conclusion: Bringing It All Together
 
 This final module has shown how we can connect the robot's nervous system (ROS 2), its virtual testbed (Digital Twin), and its AI Brain (Perception & Navigation) to create an intelligent system that can understand and act on human language. The Vision-Language-Action (VLA) loop is the architecture that makes this possible, providing a blueprint for embodied AI.

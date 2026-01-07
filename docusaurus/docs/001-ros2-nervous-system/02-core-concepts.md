@@ -1,3 +1,9 @@
+---
+id: 001-ros2-nervous-system-02-core-concepts
+sidebar_position: 2
+title: "Chapter 01.2: Core Concepts of ROS 2"
+---
+
 # Core Concepts of ROS 2
 
 ROS 2 is built around a few key concepts that enable its modular and resilient architecture. Understanding these is the key to understanding how any ROS 2-powered robot works.

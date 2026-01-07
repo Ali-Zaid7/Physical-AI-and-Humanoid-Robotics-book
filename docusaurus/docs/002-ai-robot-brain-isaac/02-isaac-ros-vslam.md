@@ -1,3 +1,9 @@
+---
+id: 002-ai-robot-brain-isaac-02-isaac-ros-vslam
+sidebar_position: 2
+title: "Chapter 03.2: NVIDIA Isaac ROS and Visual SLAM (VSLAM)"
+---
+
 # NVIDIA Isaac ROS and Visual SLAM (VSLAM)
 
 Building on the foundation of Isaac Sim's virtual worlds, we now turn our attention to how our robot brain processes real-time sensor data to understand its environment. This is where **NVIDIA Isaac ROS** comes into play, offering GPU-accelerated modules to power the robot's perception pipeline.

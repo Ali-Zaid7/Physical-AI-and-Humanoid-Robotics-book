@@ -1,3 +1,9 @@
+---
+id: 001-ros2-nervous-system-01-introduction
+sidebar_position: 1
+title: "Chapter 01.1: Introduction to the Robotic Nervous System"
+---
+
 # Introduction to the Robotic Nervous System
 
 Welcome to the world of modern robotics! Before we can make a humanoid robot see, think, or act, we need to build its nervous system. In robotics, the "nervous system" is the complex web of software that allows all the different parts of a robot—its sensors, motors, and brains—to communicate with each other reliably and in real-time.

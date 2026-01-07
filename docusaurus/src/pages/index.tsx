@@ -13,15 +13,17 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <Link to="/docs/introduction-foundations-of-physical-ai/00-introduction-01-from-digital-brains-to-physical-bodies">
+          <Heading as="h1" className="hero__title" style={{color: 'var(--ifm-font-color-base)'}}>
+            Physical AI & Humanoid Robotics
+          </Heading>
+        </Link>
+        <p className="hero__subtitle">Build robots that see, think, and act. Complete guide to humanoid robotics with modern AI tools and hands-on projects.</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/introduction-foundations-of-physical-ai/00-introduction-01-from-digital-brains-to-physical-bodies">
+            Start Reading 📖
           </Link>
         </div>
       </div>

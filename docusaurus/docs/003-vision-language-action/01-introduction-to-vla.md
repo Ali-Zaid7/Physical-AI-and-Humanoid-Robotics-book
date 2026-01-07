@@ -1,3 +1,9 @@
+---
+id: 003-vision-language-action-01-introduction-to-vla
+sidebar_position: 1
+title: "Chapter 04.1: Introduction to Vision-Language-Action (VLA)"
+---
+
 # Introduction to Vision-Language-Action (VLA)
 
 Welcome to Module 4, the capstone of our journey into humanoid robotics. In the previous modules, we have laid the groundwork:
