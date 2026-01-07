@@ -54,9 +54,9 @@ This separation of concerns is vital. The LLM handles the "what" and "why" of th
 
 ```mermaid
 graph TD
-    A["LLM Task Plan (e.g., skill: navigate, target: table)"] --> B{Action Translator};
+    A["LLM Task Plan (e.g., skill: navigate)"] --> B{"Action Translator"};
     B -- "Grounded with World State" --> C["ROS 2 Action (e.g., nav2_client.send_goal)"];
-    C --> D[Robot's ROS 2 System];
+    C --> D["Robot's ROS 2 System"];
 
     style A fill:#FEF9E7,stroke:#333,stroke-width:2px
     style B fill:#FADBD8,stroke:#333,stroke-width:2px

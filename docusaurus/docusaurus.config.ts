@@ -90,7 +90,7 @@ const config: Config = {
           items: [
             {
               label: 'Book',
-              to: '/docs/intro',
+              to: '/docs/introduction-foundations-of-physical-ai/00-introduction-01-from-digital-brains-to-physical-bodies',
             },
           ],
         },
